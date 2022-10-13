@@ -1,0 +1,27 @@
+Source: node-decompress-response
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Preyass Chandran <preyassc@hotmail.com>
+Build-Depends: debhelper-compat (= 13)
+ , node-get-stream <!nocheck>
+ , node-mimic-response <!nocheck>
+ , node-pify <!nocheck>
+ , node-tape <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-decompress-response
+Vcs-Git: https://salsa.debian.org/js-team/node-decompress-response.git
+Homepage: https://github.com/sindresorhus/decompress-response
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-decompress-response
+Architecture: all
+Depends: ${misc:Depends}
+ , node-mimic-response
+Description: Decompress a HTTP response if needed
+ Decompresses the response from http.request if it's gzipped or deflated,
+ otherwise just passes it through.
+ .
+ Node.js is an event-based server-side JavaScript engine.
